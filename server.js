@@ -19,9 +19,7 @@ const paymentRoutes = require('./route/paymentRoutes');
 const dashboardRoutes = require('./route/dashboardRoutes');
 
 
-server.get('/', (req, res) => {
-    res.send('Welcome to MMB Hostel API!');
-});
+
 
 const path = require('path');
 
