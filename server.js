@@ -3,7 +3,6 @@ const server = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
-const path = require('path');
 
 
 
@@ -21,13 +20,7 @@ const paymentRoutes = require('./route/paymentRoutes');
 const dashboardRoutes = require('./route/dashboardRoutes');
 
 
-// Serve Angular Frontend
-const frontendPath = path.join(__dirname, 'dist/mmbcomplex');
-server.use(express.static(frontendPath));
 
-server.get('*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-});
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
