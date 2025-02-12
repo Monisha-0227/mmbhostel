@@ -3,6 +3,8 @@ const server = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
+const path = require('path');
+
 
 
 server.use(express.json({ limit: '10mb' }));  // Increase the limit as needed (e.g., '10mb')
